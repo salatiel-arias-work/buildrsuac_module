@@ -1,0 +1,46 @@
+# Copyright (c) 2014-2017 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+# BuildRS UAC
+# ---------------
+buildrs_uac.name=BuildRS UAC
+buildrs_uac.vid.0=0x2341
+buildrs_uac.pid.0=0x804f
+buildrs_uac.vid.1=0x2341
+buildrs_uac.pid.1=0x004f
+
+buildrs_uac.debug.tool=gdb-openocd
+buildrs_uac.upload.tool=bossac
+buildrs_uac.upload.protocol=sam-ba
+buildrs_uac.upload.maximum_size=262144
+buildrs_uac.upload.maximum_data_size=32768
+buildrs_uac.upload.use_1200bps_touch=true
+buildrs_uac.upload.wait_for_upload_port=true
+buildrs_uac.upload.native_usb=true
+buildrs_uac.build.mcu=cortex-m0plus
+buildrs_uac.build.f_cpu=48000000L
+buildrs_uac.build.usb_product="BuldRS UAC"
+buildrs_uac.build.usb_manufacturer="ARRK"
+buildrs_uac.build.board=BUILDRS_UAC
+buildrs_uac.build.core=arduino
+buildrs_uac.build.extra_flags=-DUSE_ARDUINO_MKR_PIN_LAYOUT -D__SAMD21G18A__ {build.usb_flags}
+buildrs_uac.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+buildrs_uac.build.openocdscript=openocd_scripts/arduino_zero.cfg
+buildrs_uac.build.variant=buildrs_uac
+buildrs_uac.build.vid=0x2341
+buildrs_uac.build.pid=0x804f
+buildrs_uac.bootloader.tool=openocd
+buildrs_uac.bootloader.file=mkrzero/samd21_sam_ba_arduino_mkrzero.bin
