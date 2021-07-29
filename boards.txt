@@ -16,31 +16,27 @@
 
 # BuildRS UAC
 # ---------------
-buildrs_uac.name=BuildRS UAC
-buildrs_uac.vid.0=0x2341
-buildrs_uac.pid.0=0x804f
-buildrs_uac.vid.1=0x2341
-buildrs_uac.pid.1=0x004f
-
-buildrs_uac.debug.tool=gdb-openocd
-buildrs_uac.upload.tool=bossac
-buildrs_uac.upload.protocol=sam-ba
-buildrs_uac.upload.maximum_size=262144
-buildrs_uac.upload.maximum_data_size=32768
-buildrs_uac.upload.use_1200bps_touch=true
-buildrs_uac.upload.wait_for_upload_port=true
-buildrs_uac.upload.native_usb=true
-buildrs_uac.build.mcu=cortex-m0plus
-buildrs_uac.build.f_cpu=48000000L
-buildrs_uac.build.usb_product="BuldRS UAC"
-buildrs_uac.build.usb_manufacturer="ARRK"
-buildrs_uac.build.board=BUILDRS_UAC
-buildrs_uac.build.core=arduino
-buildrs_uac.build.extra_flags=-DUSE_ARDUINO_MKR_PIN_LAYOUT -D__SAMD21G18A__ {build.usb_flags}
-buildrs_uac.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-buildrs_uac.build.openocdscript=openocd_scripts/arduino_zero.cfg
-buildrs_uac.build.variant=buildrs_uac
-buildrs_uac.build.vid=0x2341
-buildrs_uac.build.pid=0x804f
-buildrs_uac.bootloader.tool=openocd
-buildrs_uac.bootloader.file=mkrzero/samd21_sam_ba_arduino_mkrzero.bin
+Atmel_SAMD21_XplainedPro_native.name=BuildRS UAC (Native USB Port)
+Atmel_SAMD21_XplainedPro_native.vid.0=0x03eb
+Atmel_SAMD21_XplainedPro_native.pid.0=0x6124
+Atmel_SAMD21_XplainedPro_native.vid.1=0x2341
+Atmel_SAMD21_XplainedPro_native.pid.1=0x004d
+Atmel_SAMD21_XplainedPro_native.upload.tool=arduino:bossac
+Atmel_SAMD21_XplainedPro_native.upload.protocol=sam-ba
+Atmel_SAMD21_XplainedPro_native.upload.maximum_size=262144
+Atmel_SAMD21_XplainedPro_native.upload.use_1200bps_touch=true
+Atmel_SAMD21_XplainedPro_native.upload.wait_for_upload_port=true
+Atmel_SAMD21_XplainedPro_native.upload.native_usb=true
+Atmel_SAMD21_XplainedPro_native.build.mcu=cortex-m0plus
+Atmel_SAMD21_XplainedPro_native.build.f_cpu=48000000L
+Atmel_SAMD21_XplainedPro_native.build.usb_product="BuildRS UAC"
+Atmel_SAMD21_XplainedPro_native.build.usb_manufacturer="ARRK Engineering GmbH"
+Atmel_SAMD21_XplainedPro_native.build.board=BUILDRS_UAC
+Atmel_SAMD21_XplainedPro_native.build.core=arduino:arduino
+Atmel_SAMD21_XplainedPro_native.build.extra_flags=-D__SAMD21J18A__ {build.usb_flags}
+Atmel_SAMD21_XplainedPro_native.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+Atmel_SAMD21_XplainedPro_native.build.openocdscript=
+Atmel_SAMD21_XplainedPro_native.build.variant=buildrs_uac
+Atmel_SAMD21_XplainedPro_native.build.variant_system_lib=
+Atmel_SAMD21_XplainedPro_native.build.vid=0x2341
+Atmel_SAMD21_XplainedPro_native.build.pid=0x804d
