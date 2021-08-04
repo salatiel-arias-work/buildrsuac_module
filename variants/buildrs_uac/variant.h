@@ -93,12 +93,12 @@ static const uint8_t A6  = PIN_A6;
 // --------------
 #define SPI_INTERFACES_COUNT 2
  
-// SPI
-#define PIN_SPI_MISO  (10u)
-#define PIN_SPI_MOSI  (8u)
-#define PIN_SPI_SCK   (9u)
-#define PIN_SPI_SS    (4u)
-#define PERIPH_SPI    sercom1
+// SPI - pins adapted to buildrs uac
+#define PIN_SPI_MISO  (43u)
+#define PIN_SPI_MOSI  (40u)
+#define PIN_SPI_SCK   (41u)
+#define PIN_SPI_SS    (42u) 
+#define PERIPH_SPI    sercom4
 #define PAD_SPI_TX    SPI_PAD_0_SCK_1
 #define PAD_SPI_RX    SERCOM_RX_PAD_3
 
@@ -112,7 +112,7 @@ static const uint8_t SCK  = PIN_SPI_SCK;
 #define PIN_SPI1_MOSI (26u)
 #define PIN_SPI1_SCK  (27u)
 #define PIN_SPI1_SS   (28u)
-#define PERIPH_SPI1   sercom4
+#define PERIPH_SPI1   sercom2
 #define PAD_SPI1_TX   SPI_PAD_0_SCK_1
 #define PAD_SPI1_RX   SERCOM_RX_PAD_3
 static const uint8_t SS1   = PIN_SPI1_SS;
