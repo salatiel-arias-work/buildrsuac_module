@@ -4,16 +4,11 @@
 #include <CAN.h>
 
 void setup() {
+  // start serial communication	
   Serial.begin(9600);
-  while (!Serial);
 
-  Serial.println("CAN Receiver");
-
-  // start the CAN bus at 500 kbps
-  if (!CAN.begin(500E3)) {
-    Serial.println("Starting CAN failed!");
-    while (1);
-  }
+  // start the CAN bus at 500 kbps, status LED should be turned on after this
+  CAN.begin(500E3)
 }
 
 void loop() {

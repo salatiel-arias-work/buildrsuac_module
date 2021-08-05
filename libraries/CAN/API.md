@@ -15,7 +15,7 @@ Initialize the library with the specified bit rate.
 ```arduino
 CAN.begin(bitrate);
 ```
- * `bitrate` - bit rate in bits per seconds (bps) (`1000E3`, `500E3`, `250E3`, `200E3`, `125E3`, `100E3`, `80E3`, `50E3`, `40E3`, `20E3`, `10E3`, `5E3`)
+ * `bitrate` - bit rate in bits per seconds (bps) (`1000E3`, `500E3`, `250E3`, `125E3`)
 
 Returns `1` on success, `0` on failure.
 
@@ -30,18 +30,6 @@ CAN.setPins(cs, irq);
 ```
  * `cs` - new chip select pin to use, defaults to `10`
  * `irq` - new INT pin to use, defaults to `2`.  **Must** be interrupt capable via [attachInterrupt(...)](https://www.arduino.cc/en/Reference/AttachInterrupt).
-
-This call is optional and only needs to be used if you need to change the default pins used.
-
-#### ESP32
-
-Override the default `CTX` and `CRX` pins used by the library. **Must** be called before `CAN.begin(...)`.
-
-```arduino
-CAN.setPins(rx, tx);
-```
- * `rx` - new CRX pin to use, defaults to `4`
- * `tx` - new CTX pin to use, defaults to `5`.
 
 This call is optional and only needs to be used if you need to change the default pins used.
 

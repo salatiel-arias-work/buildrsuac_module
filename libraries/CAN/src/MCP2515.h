@@ -10,8 +10,9 @@
 
 #include "CANController.h"
 
-#define MCP2515_DEFAULT_CLOCK_FREQUENCY 16e6
-
+// Default value is 20 Mhz for BuildRS UAC as opposed to 16 Mhz for MKR Zero Shield
+#define MCP2515_DEFAULT_CLOCK_FREQUENCY 20e6
+// BuildRS UAC Pin values for CS and Interrupt pins
 #define MCP2515_DEFAULT_CS_PIN          42
 #define MCP2515_DEFAULT_INT_PIN         36
 
